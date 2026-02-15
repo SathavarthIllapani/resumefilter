@@ -12,6 +12,7 @@ const Index = () => {
   const [minExperience, setMinExperience] = useState(0);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedEducation, setSelectedEducation] = useState("");
   const [shortlistedIds, setShortlistedIds] = useState<Set<number>>(new Set());
 
   const filteredCandidates = useMemo(() => {
@@ -20,9 +21,10 @@ const Index = () => {
       if (selectedSkills.length > 0 && !selectedSkills.every((s) => c.skills.includes(s))) return false;
       if (c.experience < minExperience) return false;
       if (selectedLocation && c.location !== selectedLocation) return false;
+      if (selectedEducation && c.education !== selectedEducation) return false;
       return true;
     });
-  }, [candidates, selectedSkills, minExperience, searchQuery, selectedLocation]);
+  }, [candidates, selectedSkills, minExperience, searchQuery, selectedLocation, selectedEducation]);
 
   const handleSkillToggle = useCallback((skill: string) => {
     setSelectedSkills((prev) =>
@@ -64,6 +66,7 @@ const Index = () => {
     setMinExperience(0);
     setSearchQuery("");
     setSelectedLocation("");
+    setSelectedEducation("");
   }, []);
 
   return (
@@ -113,6 +116,8 @@ const Index = () => {
             onSearchChange={setSearchQuery}
             selectedLocation={selectedLocation}
             onLocationChange={setSelectedLocation}
+            selectedEducation={selectedEducation}
+            onEducationChange={setSelectedEducation}
             onReset={handleReset}
           />
           <CandidateTable

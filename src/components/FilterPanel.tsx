@@ -1,5 +1,5 @@
 import { Search, Filter, RotateCcw } from "lucide-react";
-import { allSkills, allLocations } from "@/data/candidates";
+import { allSkills, allLocations, allEducation } from "@/data/candidates";
 
 interface FilterPanelProps {
   selectedSkills: string[];
@@ -10,6 +10,8 @@ interface FilterPanelProps {
   onSearchChange: (val: string) => void;
   selectedLocation: string;
   onLocationChange: (val: string) => void;
+  selectedEducation: string;
+  onEducationChange: (val: string) => void;
   onReset: () => void;
 }
 
@@ -22,6 +24,8 @@ const FilterPanel = ({
   onSearchChange,
   selectedLocation,
   onLocationChange,
+  selectedEducation,
+  onEducationChange,
   onReset,
 }: FilterPanelProps) => {
   return (
@@ -104,9 +108,22 @@ const FilterPanel = ({
         >
           <option value="">All Locations</option>
           {allLocations.map((loc) => (
-            <option key={loc} value={loc}>
-              {loc}
-            </option>
+            <option key={loc} value={loc}>{loc}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* Education */}
+      <div>
+        <label className="text-sm font-medium text-card-foreground mb-2 block">Education</label>
+        <select
+          value={selectedEducation}
+          onChange={(e) => onEducationChange(e.target.value)}
+          className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          <option value="">All Education</option>
+          {allEducation.map((edu) => (
+            <option key={edu} value={edu}>{edu}</option>
           ))}
         </select>
       </div>
