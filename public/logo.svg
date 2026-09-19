@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#3730A3" />
+    </linearGradient>
+    <linearGradient id="badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  
+  <!-- Base Background -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bg)" />
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="none" stroke="#818CF8" stroke-width="4" stroke-opacity="0.4" />
+  
+  <!-- Resume Sheet -->
+  <rect x="124" y="84" width="264" height="344" rx="20" fill="#FFFFFF" filter="url(#shadow)" />
+  
+  <!-- Resume Header Bar -->
+  <rect x="156" y="128" width="116" height="24" rx="12" fill="#4F46E5" />
+  
+  <!-- Resume Detail Lines -->
+  <rect x="156" y="180" width="200" height="16" rx="8" fill="#E2E8F0" />
+  <rect x="156" y="214" width="160" height="16" rx="8" fill="#E2E8F0" />
+  <rect x="156" y="248" width="180" height="16" rx="8" fill="#E2E8F0" />
+  <rect x="156" y="282" width="130" height="16" rx="8" fill="#E2E8F0" />
+  <rect x="156" y="316" width="150" height="16" rx="8" fill="#E2E8F0" />
+  
+  <!-- Filter Badge -->
+  <g filter="url(#shadow)">
+    <circle cx="372" cy="372" r="80" fill="url(#badge)" stroke="#FFFFFF" stroke-width="6" />
+    <path d="M 336 338 L 408 338 L 382 374 L 382 408 L 362 396 L 362 374 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
+  </g>
+</svg>
