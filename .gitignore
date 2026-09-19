@@ -5,3 +5,5 @@ dist
 .DS_Store
 clean.cjs
 clean.js
+.vercel
+.env*
