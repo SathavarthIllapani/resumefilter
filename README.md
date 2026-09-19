@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# Resume Filter 📄��
 
-## Project info
+A modern, responsive web application for recruiters and hiring managers to filter, organize, and analyze candidate resumes and application pipelines efficiently.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**, and optimized for fast deployments on **Vercel**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Dynamic Candidate Filtering**: Filter applicants in real time by skills, experience level, education, and application status.
+- **Candidate Data Table**: Clean tabular display of candidate details, contact links, resume previews, and status badges.
+- **Interactive Dashboard & Metrics**: High-level KPI cards (Total Candidates, Shortlisted, Interviewed, Rejected) and pipeline distribution charts.
+- **Modern UI & Responsive Design**: Clean aesthetic built with Tailwind CSS, custom vector branding, and mobile-friendly layouts.
+- **SPA Routing & Production Ready**: Fully configured for static hosting and single-page application routing on Vercel.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts / Visualizations**: Recharts
+- **Hosting / Deployment**: [Vercel](https://vercel.com/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Ensure you have [Node.js](https://nodejs.org/) (v18 or higher) and `npm` installed.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository**:
+   ```bash
+   git clone [https://github.com/SathavarthIllapani/resumefilter.git](https://github.com/SathavarthIllapani/resumefilter.git)
+   cd resumefilter
+Install dependencies:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Bash
+npm install
+Start development server:
+
+Bash
 npm run dev
-```
+Open http://localhost:8080 (or the URL printed in the terminal) to view the app in your browser.
 
-**Edit a file directly in GitHub**
+Build for production:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Bash
+npm run build
+📁 Project Structure
+Plaintext
+resumefilter/
+├── public/
+│   ├── favicon.svg          # Custom vector favicon
+│   └── logo.svg             # Application logo
+├── src/
+│   ├── components/
+│   │   ├── CandidateTable.tsx   # Candidate list and table view
+│   │   ├── DashboardCharts.tsx  # Pipeline analytics & charts
+│   │   ├── FilterPanel.tsx      # Search and parameter filters
+│   │   ├── Logo.tsx             # Dedicated Logo component
+│   │   ├── NavLink.tsx          # Navigation links
+│   │   └── StatsCards.tsx       # KPI summary cards
+│   ├── data/
+│   │   └── candidates.ts        # Mock candidate database
+│   ├── hooks/                   # Custom UI & layout hooks
+│   ├── lib/                     # Utility functions (cn, formatting)
+│   ├── pages/
+│   │   ├── Index.tsx            # Main dashboard page
+│   │   └── NotFound.tsx         # 404 Fallback page
+│   ├── App.tsx                  # Root application router
+│   ├── main.tsx                 # Entry point
+│   └── index.css                # Global styles and Tailwind directives
+├── index.html                   # HTML template with custom metadata
+├── vercel.json                  # Vercel SPA rewrite routing rules
+├── vite.config.ts               # Vite configuration
+└── package.json                 # Project dependencies & scripts
+🚢 Deployment on Vercel
+The project includes a pre-configured vercel.json rewrite configuration for seamless client-side routing.
 
-**Use GitHub Codespaces**
+Deploy via CLI:
+Bash
+# 1. Preview Deployment
+npx vercel
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# 2. Production Deployment
+npx vercel --prod
+Or connect the GitHub Repository directly to your Vercel dashboard for automatic CI/CD on every push.
 
-## What technologies are used for this project?
+👤 Author
+Sathavarth Illapani — GitHub
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+📄 License
+This project is licensed under the MIT License.
